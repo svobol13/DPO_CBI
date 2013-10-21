@@ -8,13 +8,19 @@ import cz.fit.dpo.hw1.arithmetic.elements.ExpressionElement;
 import cz.fit.dpo.hw1.arithmetic.elements.UnknownElement;
 import cz.fit.dpo.hw1.arithmetic.iterator.InOrderIterator;
 import cz.fit.dpo.hw1.arithmetic.iterator.PostOrderIterator;
+import javax.naming.OperationNotSupportedException;
 
 /**
  *
  * @author gregy
  */
 public abstract class ArithmeticComponent {
+	private ArithmeticComponent[] children;
 	private ArithmeticComponent parent;
+	
+	public ArithmeticComponent() {
+		children = new ArithmeticComponent[this.getArity()];
+	}
 
 	public void setParent(ArithmeticComponent parent) {
 		this.parent = parent;
@@ -31,6 +37,14 @@ public abstract class ArithmeticComponent {
 
 	public ArithmeticComponent getChild(int index) {
 		return null;
+	}
+
+	public void setChild(int index, ArithmeticComponent child) {
+		if(index >= getArity()) {
+			throw new IndexOutOfBoundsException("Prilis mnoho deti!");
+		}
+		child.setParent(this);
+		children[index] = child;
 	}
 
 	public ArithmeticComponent getFirstOperand() {

@@ -28,10 +28,11 @@ public class PostOrderIterator implements Iterator<ExpressionElement>
 		return null;
 	}
 
+
 	@Override
 	public void remove()
 	{
-		// TODO Auto-generated method stub
+
 		
 	}
 

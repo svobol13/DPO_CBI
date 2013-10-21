@@ -12,10 +12,12 @@ public class AddOperator extends ArithmeticComponent
 {
 	private ArithmeticComponent[] children;
 
+	public AddOperator() {
+		
+	}
 	public AddOperator(ArithmeticComponent left, ArithmeticComponent right) {
-		children = new ArithmeticComponent[2];
-		children[0] = left;
-		children[1] = right;
+		setChild(0, left);
+		setChild(1, right);
 	}
 
 	@Override

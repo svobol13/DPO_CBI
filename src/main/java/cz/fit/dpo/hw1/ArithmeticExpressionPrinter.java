@@ -2,7 +2,6 @@ package cz.fit.dpo.hw1;
 
 import cz.fit.dpo.hw1.arithmetic.AddOperator;
 import cz.fit.dpo.hw1.arithmetic.ArithmeticExpression;
-import cz.fit.dpo.hw1.arithmetic.BinaryOperator;
 import cz.fit.dpo.hw1.arithmetic.NumericOperand;
 import cz.fit.dpo.hw1.arithmetic.SubstractOperator;
 
