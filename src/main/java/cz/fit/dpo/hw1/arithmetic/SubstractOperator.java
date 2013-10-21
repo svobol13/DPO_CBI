@@ -12,8 +12,10 @@ public class SubstractOperator extends ArithmeticComponent
 {
 	private ArithmeticComponent[] children;
 
-	public SubstractOperator() {
+	public SubstractOperator(ArithmeticComponent left, ArithmeticComponent right) {
 		children = new ArithmeticComponent[2];
+		children[0] = left;
+		children[1] = right;
 	}
 
 	@Override
