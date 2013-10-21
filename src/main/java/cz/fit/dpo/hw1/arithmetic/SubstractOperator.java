@@ -12,8 +12,7 @@ public class SubstractOperator extends ArithmeticComponent
 {
 	private ArithmeticComponent[] children;
 
-	public SubstractOperator(ArithmeticComponent parent) {
-		super(parent);
+	public SubstractOperator() {
 		children = new ArithmeticComponent[2];
 	}
 

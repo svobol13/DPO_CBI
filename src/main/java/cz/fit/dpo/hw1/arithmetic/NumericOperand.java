@@ -11,9 +11,7 @@ import cz.fit.dpo.hw1.arithmetic.elements.Number;
 public class NumericOperand extends ArithmeticComponent{
 	private Integer value;
 	
-	public NumericOperand(ArithmeticComponent parent, Integer value)
-	{
-		super(parent);
+	public NumericOperand(Integer value) {
 		this.value = value;
 	}
 

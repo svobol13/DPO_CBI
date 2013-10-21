@@ -6,14 +6,14 @@ import cz.fit.dpo.hw1.arithmetic.elements.ExpressionElement;
 
 public class ArithmeticExpression
 {
-	private BinaryOperator root;
+	private ArithmeticComponent root;
 	
 	public Integer evaluate()
 	{
 		return root.evaluate();
 	}
 	
-	public void setRoot(BinaryOperator root)
+	public void setRoot(ArithmeticComponent root)
 	{
 		this.root = root;
 	}
@@ -23,31 +23,19 @@ public class ArithmeticExpression
 	 * 
 	 * @deprecated Do not provide access to the inner representation
 	 */
-	public BinaryOperator getRoot()
+	public ArithmeticComponent getRoot()
 	{
-		return root;
+		throw new UnsupportedOperationException();
 	}
 	
-	/**
-	 * Should be implemented.
-	 * 
-	 * @return
-	 */
 	public Iterator<ExpressionElement> getInOrderIterator()
 	{
-		throw new UnsupportedOperationException("Not yet implemented...");
+		return this.root.inOrderIterator();
 	}
 
-	/**
-	 * Should be implemented
-	 * 
-	 * TODO
-	 * 
-	 * @return
-	 */
 	public Iterator<ExpressionElement> getPostOrderIterator()
 	{
-		throw new UnsupportedOperationException("Not yet implemented...");
+		return this.root.postOrderIterator();
 	}
 
 }

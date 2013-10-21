@@ -16,7 +16,7 @@ import cz.fit.dpo.hw1.arithmetic.iterator.PostOrderIterator;
 public abstract class ArithmeticComponent {
 	private ArithmeticComponent parent;
 
-	public ArithmeticComponent(ArithmeticComponent parent) {
+	public void setParent(ArithmeticComponent parent) {
 		this.parent = parent;
 	}
 
@@ -31,6 +31,14 @@ public abstract class ArithmeticComponent {
 
 	public ArithmeticComponent getChild(int index) {
 		return null;
+	}
+
+	public ArithmeticComponent getFirstOperand() {
+		return getChild(0);
+	}
+	
+	public ArithmeticComponent getSecondOperand() {
+		return getChild(1);
 	}
 
 	public InOrderIterator inOrderIterator() {
